@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% if tit %}
+		<title> Home {{ tit }} </title>
+	{% else %}
+		<title> Page2 Title </title>
+	{% endif %}
+	<link style = "text/css" rel = "stylesheet" href = "{{ url_for ('static', filename = 'style.css') }}" />
+</head>
+<body style="background-image: url({{url_for('static', filename='images/bg.jpg')}})">
+	<div id="id1">
+	<h1> {% block content1 %}  {% endblock content1 %} </h1>
+	{% block content2 %}  {% endblock content2 %}
+	</div>
+</body>
+</html>

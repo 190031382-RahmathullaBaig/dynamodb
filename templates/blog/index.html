@@ -1,0 +1,28 @@
+{% extends 'blog/layout.html' %}
+
+{% block content1 %}  
+It is a new home page editted
+{% endblock content1 %}
+
+{% block content2 %}  
+
+<div style="font-size: 26px; color: black;"> 
+<ul>
+	{% for e in val %}
+	<li> {{ e }} </li>
+	{% endfor %}
+</ul>
+
+{{ result }}
+
+<form action="/calculate" method="post">
+	a value = <input type="text" name="t1"/> </br>
+	b value = <input type="text" name="t2"/> </br>
+	<input type="submit" value="Submit to Python"/>
+</form>
+
+<a href="/page2"> Link to Page2 </a>
+
+</div>
+
+{% endblock content2 %}
